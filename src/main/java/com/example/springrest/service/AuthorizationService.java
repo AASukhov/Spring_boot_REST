@@ -20,6 +20,7 @@ public class AuthorizationService {
             throw new InvalidCredentials("User name or password is empty");
         }
         List<Authorities> userAuthorities = userRepository.getUserAuthorities(user, password);
+        System.out.println(user + password);
         if (isEmpty(userAuthorities)) {
             throw new UnauthorizedUser("Unknown user " + user);
         }

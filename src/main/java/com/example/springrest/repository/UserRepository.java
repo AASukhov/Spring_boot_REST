@@ -11,11 +11,11 @@ import java.util.List;
 public class UserRepository {
     public List<Authorities> getUserAuthorities (String user, String password) {
         List<Authorities> authorities = new ArrayList<>();
-        if (user.equals("admin") && password.equals("0000")) {
+        if (user.equals("<admin>") && password.equals("<0000>")) {
             Collections.addAll(authorities, Authorities.READ,Authorities.WRITE,Authorities.DELETE);
-        } else if (user.equals("editor") && password.equals("1111")) {
+        } else if (user.equals("<editor>") && password.equals("<1111>")) {
             Collections.addAll(authorities, Authorities.READ, Authorities.WRITE);
-        } else if (user.equals("user") && password.equals ("1234"))  {
+        } else if (user.equals("<user>") && password.equals ("<1234>"))  {
             Collections.addAll(authorities, Authorities.READ);
         }
         return authorities;
